@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "1089222688116",
+    "firebase_url": "https://qnamaker.firebaseio.com",
+    "project_id": "qnamaker",
+    "storage_bucket": "qnamaker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089222688116:android:a5faf0acc5f2a84c",
+        "android_client_info": {
+          "package_name": "com.aiden.qnamaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089222688116-ovci3tk3qu7io6479bo0sh7bu574q1mn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aiden.qnamaker",
+            "certificate_hash": "8c80ce01dfa0cc5086c506fee5eb9f4f77384495"
+          }
+        },
+        {
+          "client_id": "1089222688116-v027egk0q793gkm7e65n8f9afe044523.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1089222688116-v027egk0q793gkm7e65n8f9afe044523.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCE9bvGhMOBdUrdXMShPal3rRnN3ov-zY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089222688116-v027egk0q793gkm7e65n8f9afe044523.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
