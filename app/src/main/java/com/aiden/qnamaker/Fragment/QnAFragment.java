@@ -31,11 +31,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * Created by Aiden on 2018-06-08.
@@ -75,7 +78,7 @@ public class QnAFragment extends Fragment {
         recyclerView = (RecyclerView)view.findViewById(R.id.QnAFragment_recyclerview);
 
         uid = FirebaseAuth.getInstance().getCurrentUser().getUid();            // 채팅을 요구하는 아이디
-        destinationUid = getIntent().getStringExtra("destinationUid");      // 채팅을 당하는 아이디
+     //   destinationUid = getIntent().getStringExtra("destinationUid");      // 채팅을 당하는 아이디
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,7 +130,7 @@ public class QnAFragment extends Fragment {
                     if(chatModel.users.containsKey(destinationUid) && chatModel.users.size() == 2){
                         chatRoomUid = item.getKey(); // 이건 방 아이디
                         button.setEnabled(true);
-                        recyclerView.setLayoutManager(new LinearLayoutManager(MessageActivity.this));
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));  // 원래 MessageActivity.this
                         recyclerView.setAdapter(new RecyclerViewAdapter());
                     }
                 }
@@ -257,19 +260,15 @@ public class QnAFragment extends Fragment {
             public LinearLayout linearLayout_destination;
             public LinearLayout linearLayout_main;
             public TextView textView_timestamp;
-            public TextView textView_readCounter_left;
-            public TextView textView_readCounter_right;
 
             public MessageViewHolder(View view) {
-                super(view);
-                textView_message = (TextView)view.findViewById(R.id.messageitem_textview);
-                textView_name = (TextView)view.findViewById(R.id.message_textview_name);
-                imageView = (ImageView)view.findViewById(R.id.messageActivity_imageView_profile);
-                linearLayout_destination = (LinearLayout)view.findViewById(R.id.messageActivity_linearlayout_destination);
-                linearLayout_main = (LinearLayout)view.findViewById(R.id.messageItem_linearlayout_main);
-                textView_timestamp = (TextView)view.findViewById(R.id.messageItem_textview_timestamp);
-//                textView_readCounter_left = (TextView)view.findViewById(R.id.messageItem_textview_readCounter_left);
-//                textView_readCounter_right = (TextView)view.findViewById(R.id.messageItem_textview_readCounter_right);
+                    super(view);
+                    textView_message = (TextView)view.findViewById(R.id.messageitem_textview);
+                    textView_name = (TextView)view.findViewById(R.id.message_textview_name);
+                    imageView = (ImageView)view.findViewById(R.id.messageActivity_imageView_profile);
+                    linearLayout_destination = (LinearLayout)view.findViewById(R.id.messageActivity_linearlayout_destination);
+                    linearLayout_main = (LinearLayout)view.findViewById(R.id.messageItem_linearlayout_main);
+                    textView_timestamp = (TextView)view.findViewById(R.id.messageItem_textview_timestamp);
             }
         }
     }
